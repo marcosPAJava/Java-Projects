@@ -55,8 +55,7 @@ public void salvar(){
 
 <h:selectOneMenu converter="VConverter" label="Validação" id="validacao" required="true" value="#{manterFormaAquisicaoBean.formaAquisicao.validacao}" styleClass="form-control">
 <f:selectItem itemLabel="Selecione" noSelectionOption="true" />
-<f:selectItems value="#{manterFormaAquisicaoBean.validacoes}" var="v"
-itemValue="#{v}" itemLabel="#{v.nome}"/>
+<f:selectItems value="#{manterFormaAquisicaoBean.validacoes}" var="v" itemValue="#{v}" itemLabel="#{v.nome}"/>
 </h:selectOneMenu>
 
 	
