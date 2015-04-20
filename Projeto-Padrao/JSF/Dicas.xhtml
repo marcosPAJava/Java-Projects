@@ -44,6 +44,8 @@
 	
 --------------------------------------------------Messages-Via bean----------------------------------------------------------
 
+<p:messages autoUpdate="true" globalOnly="true" />
+
 public void salvar(){
 		FacesContext context = FacesContext.getCurrentInstance();
 		context.addMessage(null, new FacesMessage("Salvo com sucesso", ""));
