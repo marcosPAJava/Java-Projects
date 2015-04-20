@@ -1,0 +1,55 @@
+----------------------------------------------------Date - JSF------------------------------------------------------------------
+
+<h:head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+</h:head>
+
+<p:inputMask  mask="99/99/9999" >
+			<f:convertDateTime pattern="dd/MM/yyyy"  />
+			
+			
+
+---------------------------------------------------Process form----------------------------------------------------------------
+
+<p:column>
+				<p:commandButton process="@this" update="@form" value="editar">
+					<f:setPropertyActionListener target="#{usuarioContoller.usuario}" value="#{usu}" />
+				</p:commandButton>
+			</p:column>
+-----------------------------------------------------Dilog---------------------------------------------------------------------
+<p:column>
+				<p:commandButton value="excluir" process="@this"
+					oncomplete="PF('dlg').show()" >
+					<f:setPropertyActionListener target="#{usuarioContoller.usuario}"
+						value="#{usu}" />
+				</p:commandButton>
+			</p:column>
+		</p:dataTable>
+
+		<p:dialog header="Deseja realmente fazer isso ?" modal="true" widgetVar="dlg" id="dlg">
+			<p:commandButton process="@this" update=":form" value="Sim"
+				action="#{usuarioContoller.remover()}" oncomplete="PF('dlg').hide()">
+			</p:commandButton>
+			<p:commandButton value="Não" oncomplete="PF('dlg').hide()">
+			</p:commandButton>
+			
+			
+			
+-----------------------------------------------------Messages---------------------------------------------------------------
+
+<p:message for="nome" />
+	<p:inputText required="true" id="nome" />
+	
+	
+	
+--------------------------------------------------Messages-Via bean----------------------------------------------------------
+
+public void salvar(){
+		FacesContext context = FacesContext.getCurrentInstance();
+		context.addMessage(null, new FacesMessage("Salvo com sucesso", ""));
+	}	
+	
+	
+	
+	
+	
