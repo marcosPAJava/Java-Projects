@@ -51,7 +51,14 @@ public void salvar(){
 		context.addMessage(null, new FacesMessage("Salvo com sucesso", ""));
 	}	
 	
-	
+-------------------------------------------------SelectOnemenu----------------------------------------------------------------
+
+<h:selectOneMenu converter="VConverter" label="Validação" id="validacao" required="true" value="#{manterFormaAquisicaoBean.formaAquisicao.validacao}" styleClass="form-control">
+<f:selectItem itemLabel="Selecione" noSelectionOption="true" />
+<f:selectItems value="#{manterFormaAquisicaoBean.validacoes}" var="v"
+itemValue="#{v}" itemLabel="#{v.nome}"/>
+</h:selectOneMenu>
+
 	
 	
 	
