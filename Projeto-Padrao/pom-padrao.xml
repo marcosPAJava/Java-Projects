@@ -108,13 +108,14 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- @Inject -->
+		<!-- CDI @Inject -->
 		<dependency>
 			<groupId>javax.inject</groupId>
 			<artifactId>javax.inject</artifactId>
 			<version>${javax.inject.version}</version>
 		</dependency>
 		
+		<!-- CDI Transation -->
 		<dependency>
 			<groupId>org.apache.deltaspike.modules</groupId>
 			<artifactId>deltaspike-jpa-module-api</artifactId>
