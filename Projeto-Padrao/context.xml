@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Default set of monitored resources -->
+<WatchedResource>WEB-INF/web.xml</WatchedResource>
+
+<Resource name="sgm_ds" auth="Container" type="javax.sql.DataSource"
+maxActive="100" maxIdle="30" maxWait="10000" username="sa" password="Hnkx317314!"
+driverClassName="net.sourceforge.jtds.jdbc.Driver"
+url="jdbc:jtds:sqlserver://192.168.1.15:1433/SGM_SEBRAE" />
+
+</Context>
