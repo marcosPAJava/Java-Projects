@@ -22,7 +22,7 @@
 		<weld-servlet.version>2.0.4.Final</weld-servlet.version>
 		<javax.servlet-api.version>3.0.1</javax.servlet-api.version>
 		<javax.inject.version>1</javax.inject.version>
-		<deltaspike-jpa-module-api.version>1.3.0</deltaspike-jpa-module-api>
+		<deltaspike-jpa-module-api.version>1.3.0</deltaspike-jpa-module-api.version>
 		
 	</properties>
 
